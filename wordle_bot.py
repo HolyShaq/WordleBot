@@ -9,11 +9,14 @@ def prune(letter, mode, index):
             if letter in _word:
                 word_pool.remove(_word)
     # Absence prune - remove words that don't have the letter
+    #               - remove words that have the letter at the index
     elif mode == "Y":
         for _word in word_pool[:]:
             if letter not in _word:
                 word_pool.remove(_word)
-    # Index prune - remove words that don't have the letter at an index
+            if _word[i] == letter:
+                word_pool.remove(_word)
+    # Index prune - remove words that don't have the letter at the index
     elif mode == "G":
         for _word in word_pool[:]:
             if _word[index] != letter:
