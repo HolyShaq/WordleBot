@@ -1,0 +1,15 @@
+main loop
+
+1. Get letter frequency in current word pool
+2. Get score of each word in the pool based on letter frequency
+3. Guess the word that scored the highest
+4. Get hints
+5. Prune word pool based on hint
+	- If hint is B (PRESENCE PRUNE):
+		- prune words that have the letter
+	- If hint is Y (ABSENCE PRUNE):
+		- prune words that dont have the letter
+	- If hint is G (INDEX PRUNE):
+		- prune words that dont have the letter at the index
+6. Go back to 1
+	
